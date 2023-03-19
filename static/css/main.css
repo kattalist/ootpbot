@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'Prototype';
+    src: url('fonts/Prototype.ttf');
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-Regular.ttf');
+}
+:root {
+    --dark-bg-color: #001427;
+    --light-accent-color: #e8f1f2;
+    --accent-color-1: #a30015;
+    --accent-color-2: #57737a;
+    --accent-color-3: #9cc5a1;
+}
+* {
+    background-color: var(--dark-bg-color);  
+}
+.title{
+    margin: 10px;
+    font-family: 'Prototype';
+    font-size: 30px;
+}
+.main, .input-table {
+    margin: 10px;
+    font-family: 'Montserrat';
+    font-size: 20px;
+}
+.input-table input {
+    font-family: 'Montserrat';
+    font-size: 30px;
+    border: 4px solid var(--accent-color-2);
+    border-radius: 10px;
+    color: var(--light-accent-color);
+    padding-left: 10px;
+}
+.input-table input:focus {
+    border: 4px solid var(--light-accent-color);
+}
+.submit-btn {
+    font-family: 'Montserrat';
+    color: var(--light-accent-color);
+    border: 2px solid var(--accent-color-1);
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 10px 40px;
+    margin-left: 10px;
+    transition-duration: 0.4s;
+}
+.submit-btn:hover {
+    background-color: var(--light-accent-color);
+    color: var(--accent-color-1);
+    border: 2px solid var(--light-accent-color);
+    cursor: pointer;
+}
+.footer {
+    font-family: 'Montserrat';
+    font-size: 10px;
+    margin-left: 10px;
+}
+.light-text {
+    color: var(--light-accent-color);
+}

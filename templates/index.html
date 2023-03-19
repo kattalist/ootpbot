@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<div class = "title light-text">
+    <h1>OOTPBot</h1>
+
+    <hr>
+</div>
+<div class = "main light-text">
+    <p>OOTPBot is a neural network that predicts statistics using player ratings. The network is trained using over 5000 player seasons in a modern simulation of
+        OOTP 23.
+    </p>
+
+    <p>To use OOTPBot, simply input your player ratings into the fields below. The neural network will output that player's projected wRC+.</p>
+</div>
+<div class = "input-table light-text">
+    <form action="/" method="POST">
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>CON</th>
+                <th>GAP</th>
+                <th>POW</th>
+                <th>EYE</th>
+                <th>AVK</th>
+                <th>CON v. L</th>
+                <th>POW v. L</th>
+                <th>CON v. R</th>
+                <th>POW v. R</th>
+            </tr>
+            <tr>
+                <th><input type="string" name = "name"></th>
+                <th><input type="number" name = "con" min = "20" max = "125" step = "5"></th>
+                <th><input type="number" name = "gap" min = "20" max = "125" step = "5"></th>
+                <th><input type="number" name = "pow" min = "20" max = "125" step = "5"></th>
+                <th><input type="number" name = "eye" min = "20" max = "125" step = "5"></th>
+                <th><input type="number" name = "avk" min = "20" max = "125" step = "5"></th>
+                <th><input type="number" name = "conl" min = "20" max = "125" step = "5"></th>
+                <th><input type="number" name = "powl" min = "20" max = "125" step = "5"></th>
+                <th><input type="number" name = "conr" min = "20" max = "125" step = "5"></th>
+                <th><input type="number" name = "powr" min = "20" max = "125" step = "5"></th>
+            </tr>
+        </table>
+        <button class="submit-btn">Predict</button>
+    </form>
+</div>
+<div class = "main light-text">
+    <p> Your player's projected wRC+: {{ prediction }}
+    </p>
+</div>
+<div class = "footer light-text">
+    <p><span> &#169; </span> Jack Fallows, 2022. </p>
+</div>
+{% endblock %}
